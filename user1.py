@@ -39,22 +39,22 @@ class Window1(QMainWindow):
     def messagesend(self):
         try:
             txt = self.textEdit.toPlainText()
-            url = 'http://URL For Send Messages/{}'.format(txt)
+            url = 'http://url/user1/{}'.format(txt)
             resp = requests.get(url=url)
         except Exception:
             print("error")
     def Readmessage(self):
         try:
-            url = 'http://URL For Read Messages/'
+            url = 'http://url/'
             resp = requests.get(url=url)
             data = resp.json()
-            self.textBrowser.setText(data["User1 Message : "])
-            self.textBrowser_2.setText(data["User2 Message : "])
+            self.textBrowser.setText(data["user1 Message : "])
+            self.textBrowser_2.setText(data["user2 Message : "])
         except Exception:
             self.textBrowser.setText("Connection Error")
     def clearmessage(self):
         try:
-            url = 'http://URL For Clear Messages'
+            url = 'http://URL/user1clearmessage'
             resp = requests.get(url=url)
         except Exception:
             print("error")
