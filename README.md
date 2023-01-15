@@ -4,7 +4,7 @@ A simple Chat with fast api
 run Fastapi.py on a server
 if you are using windows server just do this things befor u run the fastapi
 
-run netsh as run as adminstrator
+run netsh as run as adminstrator \n
 ####run this command :
 advfirewall firewall add rule name="Open Port 5000" dir=in action=allow protocol=TCP localport=5000
 ####and this
